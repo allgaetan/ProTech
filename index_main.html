@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKOS Visualization</title>
+    <link rel="stylesheet" href="style_main.css">
+    <script src="https://linkeddata.github.io/rdflib.js/dist/rdflib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js" integrity="sha512-RcuA+PEnJcg1caTn53YLhZ3bYVFXphzcPL1BjBoAwFiA3bErav+AndZz1xrqpAtv/8Waep2X+9zn8KWpwacUSA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script_main.js"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/.icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/.icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/.icon/favicon-16x16.png">
+    <link rel="manifest" href="/.icon/site.webmanifest">
+</head>
+<body>
+    <div id="top-line">SKOS database Visualization</div>
+    <div id="left-column">
+        <h1>Hierarchy</h1>
+        <!-- Hierarchy Navigation -->
+        <div id="search-box">
+            <input type="text" id="search-bar" placeholder="Search concepts...">
+        </div>
+        <div id="hierarchy"></div>
+    </div>
+    <div id="center-column">
+        <h1>Relation Graph</h1>
+        <!-- Graph Display -->
+        <div id="caption" style="width: 100%; height: 20%;"></div>
+        <div id="canvas" style="width: 100%; height: 80%;"></div>
+    </div>
+    <div id="right-column">
+        <h1>Details</h1>
+        <!-- Concept Details -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    font-family: monospace;
+}
+
+#top-line {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.form{
+    margin-top: 15vh;
+    margin-left: 15%;
+}
+
+.database {
+    margin-left: 10vh;
+    margin-top: 10vh;
+    font-size: 20px;
+}
+
+.radio_button {
+    margin-right: 10px;
+}
+
+#submit_button {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #DDDDDD;
+    color: #2F2F2F;
+}

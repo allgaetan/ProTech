@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SKOS Visualization</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://linkeddata.github.io/rdflib.js/dist/rdflib.min.js"></script>
+    <script>
+        function submitForm() {
+            var form = document.querySelector(".form");
+            var radios = form.querySelectorAll("input[name='database']");
+
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    //console.log(radios[i].value);
+                    switch (radios[i].value) {
+                        case "1":
+                            //alert("Existing database selected");
+                            form.action = "index_main.html?databaseType=1&data=" + encodeURIComponent(form.elements["data1"].value);
+                            break;
+                        case "2":
+                            //alert("Web database selected");
+                            form.action = "index_main.html?databaseType=2&data=" + encodeURIComponent(form.elements["data2"].value);
+                            break;
+                    }
+                } 
+            }
+        }
+    </script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/.icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/.icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/.icon/favicon-16x16.png">
+    <link rel="manifest" href="/.icon/site.webmanifest">
+</head>
+<body>
+    <div id="top-line">SKOS database Visualization</div>
+    <form class="form" onsubmit="console.log('Form submitted!')">
+        <div class="database existing_database">
+            <input class="radio_button" type="radio" name="database" value="1">
+            <label for="exampleSelect">Use an existing database from our examples</label>
+            <select id="exampleSelect" name="data1">
+                <option disabled selected value> -- Select a database -- </option>
+                <option value="WOT">All WOT Concept Schemes</option>
+                <option value="http://localhost:8080/.wot-catalogue/bacnet/scheme.ttl">BACnet</option>
+                <option value="http://localhost:8080/.wot-catalogue/ble/scheme.ttl">Bluetooth Low Energy - General
+                    Attribute Profile</option>
+                <option value="http://localhost:8080/.wot-catalogue/lwm2m/scheme.ttl">Light-weight Machine-to-Machine
+                    (LWM2M)</option>
+                <option value="http://localhost:8080/.wot-catalogue/ocf/scheme.ttl">Swagger/OpenAPI Specification
+                </option>
+                <option value="http://localhost:8080/.wot-catalogue/onem2m/scheme.ttl">oneM2M</option>
+            </select>
+            <br>
+        </div>  
+        <div class="database web_database">
+            <label>
+                <input class="radio_button" type="radio" name="database" value="2">
+                Use a web link toward the digital database
+            </label>
+            <input type="text" id="webSelect" name="data2" placeholder="..." style="background-color: #f0f0f0; color: #2F2F2F;">
+            <br>
+        </div>
+
+        <button id="submit_button" type="submit" onclick="submitForm()" style="background-color: #DDDDDD; color: #2F2F2F;">Submit</button>
+    </form>
+</body>
+
+</html>

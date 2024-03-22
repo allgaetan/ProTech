@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    font-family: monospace;
+    overflow-x: hidden;
+}
+
+#top-line {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 50px;
+}
+
+#center-column {
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    height: calc(100vh - 100px);
+    overflow: hidden;
+    padding: 10px;
+    border-left: solid;
+    border-left-width: 5px;
+    border-left-color: #333;
+    border-right: solid;
+    border-right-width: 5px;
+    border-right-color: #333;           
+}
+#right-column {
+    display: inline-block;
+    vertical-align: top;
+    width: 26%;
+    height: calc(100vh - 100px);
+    overflow-y: auto; 
+    overflow-x: hidden;
+    padding: 10px;
+}
+#left-column {
+    display: inline-block;
+    vertical-align: top;
+    width: 25%;
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
+}
+
+#left-column ul {
+    list-style-type: none;
+    padding: 5px;
+}
+
+#left-column li {
+    margin-left: 10px; 
+    padding: 3px;
+    cursor: pointer;
+}
+
+#left-column ul ul {
+    padding: 3px;
+    margin-left: 20px;/
+}
+
+#left-column .highlight {
+    font-weight: bold;
+    color: green;
+}
+#left-column .highlight-off {
+    font-weight: normal;
+    color:#333;
+}
+
+#search-bar {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    position: relative;
+    font-family: monospace;
+}
+
+#dropdown {
+    position: absolute;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 500px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-top: none;
+    display: none;
+    z-index: 1;
+    background-color: white;
+}
+
+#dropdown div {
+    padding: 8px;
+    cursor: pointer;
+}
+
+#dropdown div:hover {
+    background-color: #f2f2f2;
+}
+
+#left-column li:hover {
+    font-weight: bold;
+}
+
+#search-box {
+    position: relative;
+}
+
+#center-column caption {
+    width: 100%;
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+#center-column canvas {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+}
